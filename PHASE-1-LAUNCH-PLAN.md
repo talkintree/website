@@ -56,14 +56,14 @@ Launch a polished, credible website that clearly introduces Dr. Ramesh Kayyam, s
 
 ## Essential Launch Tasks
 
-- [ ] Add final About-page biography
-- [ ] Confirm all book titles, descriptions, and Amazon links
-- [ ] Confirm all navigation buttons lead to the correct pages
-- [ ] Add LinkedIn and YouTube links
+- [x] Add final About-page biography
+- [x] Confirm all book titles, descriptions, and Amazon links
+- [x] Confirm all navigation buttons lead to the correct pages
+- [x] Add LinkedIn and YouTube links
 - [ ] Test the site on phone and desktop
 - [ ] Review contact form delivery in Netlify
-- [ ] Replace any remaining placeholder text or images
-- [ ] Add a privacy policy page before public launch
+- [x] Replace remaining placeholder text and images
+- [x] Add a privacy policy page before public launch
 - [ ] Make the Netlify project public once the review is complete
 
 ## Phase 1 Complete When
