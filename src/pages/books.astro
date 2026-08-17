@@ -1,0 +1,8 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'; import BookCard from '../components/BookCard.astro'; import { books } from '../data/books';
+---
+<BaseLayout title="Books" description="Books by Dr. Ramesh Kayyam: fiction, ideas, youth education, and stories for a changing world.">
+<section class="page-hero"><div class="container"><p class="eyebrow">The Talkintree library</p><h1>Stories that stay with you.</h1><p>Explore books that ask questions, spark imagination, and honor the many dimensions of the human experience.</p></div></section>
+<section class="paper section"><div class="container"><div class="book-grid">{books.map(book => <BookCard {book}/>)}</div><p class="note">Book covers and Amazon links will be added here before launch. Each book card is already prepared for them.</p></div></section>
+</BaseLayout>
+<style>.page-hero{padding:11rem 0 5rem;background:radial-gradient(circle at 70% 20%,#3a3020,#111 60%)}h1{font-size:clamp(3.4rem,7vw,6.5rem);letter-spacing:-.06em;margin:.7rem 0} .page-hero p:not(.eyebrow){color:#d2cbc0;max-width:600px;font-size:1.1rem}.book-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3rem 2rem}.note{color:#615b51;font-size:.85rem;margin-top:4rem;border-top:1px solid #ddd5c7;padding-top:1rem}@media(max-width:750px){.book-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:460px){.book-grid{grid-template-columns:1fr}}</style>

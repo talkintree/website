@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const posts = [
+  ['Leadership', 'What Human Leadership Means in an AI-First World', 'A reflection on the qualities that matter most as technology transforms the nature of work.'],
+  ['Humanity & Technology', 'The Questions We Should Ask Before We Build', 'Innovation is not only about what is possible—it is also about what is worth creating.'],
+  ['Personal Growth', 'A Lifelong Learner’s Compass', 'Curiosity, humility, and reflection are practical strengths for an uncertain world.']
+];
+---
+<BaseLayout title="Thought Garden" description="The Talkintree journal: reflections on leadership, artificial intelligence, society, learning, and human potential.">
+<section class="page-hero"><div class="container"><p class="eyebrow">Thought Garden</p><h1>Ideas need space to grow.</h1><p>Reflections on leadership, artificial intelligence, society, philosophy, education, and personal growth.</p></div></section>
+<section class="paper section"><div class="container"><div class="posts">{posts.map(([category, title, excerpt], index) => <article><p class="eyebrow">{category} · Coming soon</p><span>0{index + 1}</span><h2>{title}</h2><p>{excerpt}</p><a href="/contact">Join the newsletter →</a></article>)}</div></div></section>
+</BaseLayout>
+<style>.page-hero{padding:11rem 0 5rem;background:radial-gradient(circle at 70% 20%,#244634,#111 62%)}h1{font-size:clamp(3.5rem,7vw,6.5rem);letter-spacing:-.06em;margin:.7rem 0}.page-hero p:not(.eyebrow){color:#d0c8bc;max-width:600px;font-size:1.08rem}.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}.posts article{border:1px solid #ded6c9;padding:1.6rem;min-height:300px;display:flex;flex-direction:column}.posts span{color:#b59046;font-family:'Playfair Display',serif;font-size:2.6rem;line-height:1;margin:3rem 0 1.1rem}.posts h2{font-size:1.65rem}.posts p:not(.eyebrow){color:#605a50;font-size:.92rem}.posts a{margin-top:auto;color:#71541e;font-size:.75rem;font-weight:bold;text-transform:uppercase;letter-spacing:.08em}@media(max-width:700px){.posts{grid-template-columns:1fr}}</style>

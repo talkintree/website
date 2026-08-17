@@ -1,0 +1,24 @@
+---
+const links = [
+  ['Home', '/'], ['About', '/about'], ['Books', '/books'], ['Leadership', '/leadership'], ['Speaking', '/speaking'], ['Thought Garden', '/blog'], ['Contact', '/contact']
+];
+const path = Astro.url.pathname;
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Talkintree home"><span>talkin</span>tree<i>•</i></a>
+    <nav aria-label="Main navigation">
+      {links.map(([name, href]) => <a href={href} class:list={{ active: path === href }}>{name}</a>)}
+    </nav>
+    <a class="header-cta" href="/contact">Invite Dr. Ramesh</a>
+  </div>
+</header>
+<style>
+  .site-header { position:absolute; z-index:10; width:100%; border-bottom:1px solid rgba(255,255,255,.09); }
+  .header-inner { min-height:82px; display:flex; align-items:center; justify-content:space-between; gap:2rem; }
+  .brand { font-family:'Playfair Display',Georgia,serif; font-weight:800; font-size:1.62rem; letter-spacing:-.07em; white-space:nowrap; }
+  .brand span { color:var(--gold); }.brand i { font-size:1rem; color:var(--gold); margin-left:.12em; }
+  nav { display:flex; gap:1.3rem; align-items:center; } nav a { color:#d2ccc2; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; } nav a:hover, nav a.active { color:var(--gold); }
+  .header-cta { border:1px solid var(--gold); padding:.55rem .75rem; color:var(--gold); font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; white-space:nowrap; }
+  @media (max-width:900px) { nav { display:none; } .header-cta { display:none; } }
+</style>

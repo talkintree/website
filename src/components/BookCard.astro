@@ -1,0 +1,10 @@
+---
+const { book } = Astro.props;
+---
+<article class="book-card">
+  <div class="cover" style={`--cover:${book.accent}`}><span>{book.category}</span><strong>{book.title}</strong><em>Dr. Ramesh Kayyam</em></div>
+  <div><p class="eyebrow">{book.category}</p><h3>{book.title}</h3><p>{book.description}</p><a href="/books" class="text-link">Discover the book →</a></div>
+</article>
+<style>
+ .book-card{display:grid;gap:1rem}.cover{aspect-ratio:3/4;padding:1.4rem;display:flex;flex-direction:column;justify-content:space-between;color:#fff;background:linear-gradient(145deg,rgba(0,0,0,.25),rgba(0,0,0,.8)),radial-gradient(circle at 50% 20%,#e6c98022,transparent 30%),var(--cover);box-shadow:12px 16px 22px rgba(0,0,0,.27);border-left:4px solid rgba(255,255,255,.28)}.cover span{font-size:.58rem;text-transform:uppercase;letter-spacing:.14em}.cover strong{font-family:'Playfair Display',serif;font-size:clamp(1.45rem,2.5vw,2rem);line-height:1.05}.cover em{font-size:.67rem;font-style:normal;letter-spacing:.08em}.book-card h3{font-size:1.3rem}.book-card p:not(.eyebrow){color:#aaa297;font-size:.9rem;margin:.55rem 0}.text-link{color:var(--gold);font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;font-weight:700}
+</style>
